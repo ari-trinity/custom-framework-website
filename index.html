@@ -51,7 +51,8 @@
 							<lia><a class="dropdown-item" href="#reviews">Reviews</a></lia>
 							<lia><a class="dropdown-item" href="#guides">Guides</a></lia>
 							<lia><a class="dropdown-item" href="#community">Community</a></lia>
-						</ul> <!-- whats happening? for desktop, menu items will show in a row | for mobile, the menu collapses into a hamburger menu | dropdown, user can click 'more' to see extra options -->
+						</ul>
+						<!-- whats happening? for desktop, menu items will show in a row | for mobile, the menu collapses into a hamburger menu | dropdown, user can click 'more' to see extra options -->
 
 					</li>
 				</ul>
@@ -59,16 +60,54 @@
 		</div>
 	</nav>
 
-		<main> <!-- main content -- carousel component -->
-			<div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
-				<div ckass="carousel-indicators">
-					<button type="button" data-bs-target="photoCarousel" data-bs-slide-to="0" class="active"></button>
-					<button type="button" data-bs-target="photoCarousel" data-bs-slide-to="1"></button>
-					<button type="button" data-bs-target="photoCarousel" data-bs-slide-to="2"></button>
+	<main> <!-- main content -- carousel component -->
+		<div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+			<div ckass="carousel-indicators">
+				<button type="button" data-bs-target="photoCarousel" data-bs-slide-to="0" class="active"></button>
+				<button type="button" data-bs-target="photoCarousel" data-bs-slide-to="1"></button>
+				<button type="button" data-bs-target="photoCarousel" data-bs-slide-to="2"></button>
+			</div>
+
+			<div class="carousel-inner"> <!-- for landscape photography -->
+				<div class="carousel-item active">
+					<img src="https://via.placeholder.com/1200x500/4a5568/ffffff?text=Landscape+Photography"
+						class="d-block w-100" alt="Landscape Photography">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Landscape Photography</h5>
+						<p>Capturing Nature's Most Beautiful Spots</p>
+					</div>
 				</div>
 
+				<div class="carousel-item"> <!-- for portrait photography -->
+					<img src="https://via.placeholder.com/1200x500/8b5cf6/ffffff?text=Portrait+Photography"
+						class="d-block w-100" alt="Portrait Photography">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Portrait Photography</h5>
+						<p>Every expression tells a story</p>
+					</div>
+				</div>
+
+				<div class="carousel-item"> <!-- for urban & architecture photography -->
+					<img src="https://via.placeholder.com/1200x500/059669/ffffff?text=Urban+Photography"
+						class="d-block w-100" alt="Urban Photography">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Urban Photography</h5>
+						<p>Finding beauty in the built world</p>
+					</div>
+				</div>
 			</div>
-		</main>
+
+			<button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+
+			<section class="container my-5">
+				<h2 class="text-center mb-4">Photography Services & Packages</h2>
+				<p class="text-center text-muted mb-5">Click each package to learn more about what's included</p>
+			</section>
+		</div>
+	</main>
 </body>
 
 
