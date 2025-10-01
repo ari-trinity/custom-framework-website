@@ -24,13 +24,31 @@
 		</div>
 	</header>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- navbar-expand-lg: ensures navigation bar will collapse on small screens. | navbar-dark bg-dark: dark theme & dark background-->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<!-- navbar-expand-lg: ensures navigation bar will collapse on small screens. | navbar-dark bg-dark: dark theme & dark background-->
 		<div class="container">
 
 			<a class="navbar-brand" href="#">Ari Taylor Photography</a> <!-- left side of nav bar -->
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 				<span class="navbar-toggler-icon"></span> <!-- the 3 horizontal lines -->
 			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<!-- navbar-nav: list of navigation links | ms-auto: menu will be pushed to the left side -->
+					<li class="nav-item"> <!-- nav-item is for each menu item -->
+						<a class="nav-link active" href="#home">Home</a>
+						<!-- nav-link: styles the link | active: highlights the current page -->
+					</li>
+
+					<li class="nav-item dropdown"> <!-- creates our dropdown menu -->
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+							<!-- dropdown-toggle: will add dropdown arrow -->
+							More
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</nav>
 
