@@ -4,26 +4,38 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ari's Portfolio</title>
+	<title>Ari Taylor Photography Portfolio</title>
+
+	<!-- Bootstrap CSS CDN -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
 	<link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-	<header class="bg-primary text-white py-4">
+
+	<!-- HEADER SECTION -->
+	<header class="bg-dark text-white py-4">
 		<div class="container">
 			<div class="d-flex justify-content-between align-items-center">
-				<h1 class="mb-0">Welcome to my World!</h1>
-				<button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#contactModal">
-					Contact Us!
+				<div>
+					<h1 class="mb-0">Ari Taylor Photography</h1>
+					<p class="mb-0 small text-muted">Capturing Life's Beautiful Moments</p>
+				</div>
+				<button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#contactModal">
+					Book a Session
 				</button>
 			</div>
 		</div>
 	</header>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<!-- NAVIGATION BAR -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container">
-			<a class="navbar-brand" href="#">Ari Taylor Photography</a>
+			<a class="navbar-brand fw-bold" href="#">AT Photography</a>
+
+			<!-- Mobile hamburger button -->
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -33,39 +45,58 @@
 					<li class="nav-item">
 						<a class="nav-link active" href="#home">Home</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#portfolio">Portfolio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#services">Services</a>
+					</li>
 
+					<!-- DROPDOWN COMPONENT (Required Component #4) -->
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-							More
+							Gallery
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#reviews">Reviews</a></li>
-							<li><a class="dropdown-item" href="#guides">Guides</a></li>
-							<li><a class="dropdown-item" href="#community">Community</a></li>
+							<li><a class="dropdown-item" href="#portraits">Portraits</a></li>
+							<li><a class="dropdown-item" href="#events">Events</a></li>
+							<li><a class="dropdown-item" href="#nature">Nature</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#all">View All</a></li>
 						</ul>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
+	<!-- MAIN CONTENT -->
 	<main>
 
+		<!-- CAROUSEL COMPONENT (Required Component #1) -->
 		<div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
 
+			<!-- Carousel indicators (dots) -->
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active"></button>
 				<button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1"></button>
 				<button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2"></button>
 			</div>
 
+			<!-- Carousel slides -->
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img src="https://via.placeholder.com/1200x500/4a5568/ffffff?text=Landscape+Photography"
 						class="d-block w-100" alt="Landscape Photography">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Landscape Photography</h5>
-						<p>Capturing Nature's Most Beautiful Spots</p>
+						<p>Capturing the beauty of nature's grand vistas</p>
 					</div>
 				</div>
 
@@ -74,7 +105,7 @@
 						class="d-block w-100" alt="Portrait Photography">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Portrait Photography</h5>
-						<p>Every expression tells a story</p>
+						<p>Telling stories through human expressions</p>
 					</div>
 				</div>
 
@@ -83,9 +114,379 @@
 						class="d-block w-100" alt="Urban Photography">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Urban Photography</h5>
-						<p>Finding beauty in the built world</p>
+						<p>Finding art in city streets and architecture</p>
 					</div>
 				</div>
 			</div>
 
-			<button class="carousel-control-prev" type="button" data-bs-target="#photoCarou
+			<!-- Carousel controls -->
+			<button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+		<!-- ACCORDION COMPONENT (Required Component #3) -->
+		<section class="container my-5" id="services">
+			<h2 class="text-center mb-4">Photography Services & Packages</h2>
+			<p class="text-center text-muted mb-5">Click each package to learn more about what's included</p>
+
+			<div class="accordion accordion-flush" id="servicesAccordion">
+
+				<!-- Package 1: Portraits -->
+				<div class="accordion-item">
+					<h3 class="accordion-header">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse"
+							data-bs-target="#service1">
+							Portrait Photography Sessions
+						</button>
+					</h3>
+					<div id="service1" class="accordion-collapse collapse show" data-bs-parent="#servicesAccordion">
+						<div class="accordion-body">
+							<strong>Perfect for individuals, families, and professionals</strong>
+							<ul class="mt-3">
+								<li>1-hour photography session</li>
+								<li>Location of your choice (indoor/outdoor)</li>
+								<li>20+ edited high-resolution photos</li>
+								<li>Online gallery for easy sharing</li>
+								<li>Print release included</li>
+							</ul>
+							<p class="text-muted">Starting at $250</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Package 2: Events -->
+				<div class="accordion-item">
+					<h3 class="accordion-header">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#service2">
+							Event Photography Coverage
+						</button>
+					</h3>
+					<div id="service2" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+						<div class="accordion-body">
+							<strong>Capture every moment of your special event</strong>
+							<ul class="mt-3">
+								<li>Full-day event coverage (up to 8 hours)</li>
+								<li>Weddings, birthdays, corporate events</li>
+								<li>100+ edited photos delivered</li>
+								<li>Second photographer available</li>
+								<li>Custom photo album option</li>
+							</ul>
+							<p class="text-muted">Starting at $800</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Package 3: Commercial -->
+				<div class="accordion-item">
+					<h3 class="accordion-header">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+							data-bs-target="#service3">
+							Commercial & Product Photography
+						</button>
+					</h3>
+					<div id="service3" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+						<div class="accordion-body">
+							<strong>Professional images for your business</strong>
+							<ul class="mt-3">
+								<li>Product photography for e-commerce</li>
+								<li>Corporate headshots and team photos</li>
+								<li>Real estate photography</li>
+								<li>Professional editing and retouching</li>
+								<li>Commercial usage rights included</li>
+							</ul>
+							<p class="text-muted">Custom pricing based on project scope</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- COLLAPSE COMPONENT (Required Component #5) -->
+		<section class="container my-5">
+			<h2 class="text-center mb-4">Explore My Work by Category</h2>
+			<p class="text-center text-muted mb-4">Click to see more about each photography style</p>
+
+			<div class="row">
+				<!-- Nature & Wildlife -->
+				<div class="col-md-4 mb-3">
+					<button class="btn btn-outline-primary w-100 py-3" data-bs-toggle="collapse"
+						data-bs-target="#nature">
+						Nature & Wildlife
+					</button>
+					<div class="collapse mt-3" id="nature">
+						<div class="card card-body">
+							<h5>Nature & Wildlife Photography</h5>
+							<p>Specializing in landscape, wildlife, and macro nature photography. From sweeping mountain
+								vistas to intimate close-ups of forest life, I capture the natural world in all its
+								beauty.</p>
+							<small class="text-muted">Available for: Nature magazines, conservation projects,
+								prints</small>
+						</div>
+					</div>
+				</div>
+
+				<!-- Street & Urban -->
+				<div class="col-md-4 mb-3">
+					<button class="btn btn-outline-primary w-100 py-3" data-bs-toggle="collapse"
+						data-bs-target="#street">
+						Street & Urban
+					</button>
+					<div class="collapse mt-3" id="street">
+						<div class="card card-body">
+							<h5>Street & Urban Photography</h5>
+							<p>Documenting the energy and stories of city life. From candid moments to architectural
+								marvels, I find beauty in the urban environment and the people who bring it to life.</p>
+							<small class="text-muted">Available for: Editorial, city guides, art exhibitions</small>
+						</div>
+					</div>
+				</div>
+
+				<!-- Fine Art -->
+				<div class="col-md-4 mb-3">
+					<button class="btn btn-outline-primary w-100 py-3" data-bs-toggle="collapse"
+						data-bs-target="#fineart">
+						Fine Art
+					</button>
+					<div class="collapse mt-3" id="fineart">
+						<div class="card card-body">
+							<h5>Fine Art Photography</h5>
+							<p>Creative and conceptual photography that explores themes through visual storytelling.
+								Each piece is carefully crafted to evoke emotion and invite interpretation.</p>
+							<small class="text-muted">Available for: Gallery exhibitions, private collections,
+								prints</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PHOTO GALLERY SECTION -->
+		<section class="container my-5" id="portfolio">
+			<h2 class="text-center mb-4">Recent Work</h2>
+
+			<div class="row g-3">
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card h-100">
+						<img src="https://via.placeholder.com/400x300/6366f1/ffffff?text=Photo+1" class="card-img-top"
+							alt="Golden Hour Landscape">
+						<div class="card-body">
+							<h5 class="card-title">Golden Hour Landscape</h5>
+							<p class="card-text">Captured during a hiking trip in the mountains.</p>
+							<button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+								data-bs-target="#photoModal">
+								View Full Size
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card h-100">
+						<img src="https://via.placeholder.com/400x300/8b5cf6/ffffff?text=Photo+2" class="card-img-top"
+							alt="Urban Reflections">
+						<div class="card-body">
+							<h5 class="card-title">Urban Reflections</h5>
+							<p class="card-text">Architectural photography in downtown district.</p>
+							<button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+								data-bs-target="#photoModal">
+								View Full Size
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card h-100">
+						<img src="https://via.placeholder.com/400x300/ec4899/ffffff?text=Photo+3" class="card-img-top"
+							alt="Portrait Session">
+						<div class="card-body">
+							<h5 class="card-title">Portrait Session</h5>
+							<p class="card-text">Natural light portrait from recent session.</p>
+							<button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+								data-bs-target="#photoModal">
+								View Full Size
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card h-100">
+						<img src="https://via.placeholder.com/400x300/10b981/ffffff?text=Photo+4" class="card-img-top"
+							alt="Nature Macro">
+						<div class="card-body">
+							<h5 class="card-title">Nature Macro</h5>
+							<p class="card-text">Close-up shot of morning dew on leaves.</p>
+							<button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+								data-bs-target="#photoModal">
+								View Full Size
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card h-100">
+						<img src="https://via.placeholder.com/400x300/f59e0b/ffffff?text=Photo+5" class="card-img-top"
+							alt="Event Coverage">
+						<div class="card-body">
+							<h5 class="card-title">Event Coverage</h5>
+							<p class="card-text">Capturing special moments at celebrations.</p>
+							<button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+								data-bs-target="#photoModal">
+								View Full Size
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="card h-100">
+						<img src="https://via.placeholder.com/400x300/ef4444/ffffff?text=Photo+6" class="card-img-top"
+							alt="Sunset Seascape">
+						<div class="card-body">
+							<h5 class="card-title">Sunset Seascape</h5>
+							<p class="card-text">Coastal photography at the perfect moment.</p>
+							<button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
+								data-bs-target="#photoModal">
+								View Full Size
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- MODAL COMPONENTS (Required Component #2) -->
+
+		<!-- Contact Modal -->
+		<div class="modal fade" id="contactModal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Get In Touch</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<p class="text-muted mb-4">Interested in booking a session or have questions? Send me a message!
+						</p>
+
+						<form>
+							<div class="mb-3">
+								<label for="clientName" class="form-label">Name</label>
+								<input type="text" class="form-control" id="clientName" placeholder="Your full name"
+									required>
+							</div>
+
+							<div class="mb-3">
+								<label for="clientEmail" class="form-label">Email</label>
+								<input type="email" class="form-control" id="clientEmail" placeholder="your@email.com"
+									required>
+							</div>
+
+							<div class="mb-3">
+								<label for="clientPhone" class="form-label">Phone (optional)</label>
+								<input type="tel" class="form-control" id="clientPhone" placeholder="(555) 123-4567">
+							</div>
+
+							<div class="mb-3">
+								<label for="sessionType" class="form-label">Type of Session</label>
+								<select class="form-select" id="sessionType">
+									<option selected>Choose...</option>
+									<option value="portrait">Portrait Session</option>
+									<option value="event">Event Photography</option>
+									<option value="commercial">Commercial/Product</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+
+							<div class="mb-3">
+								<label for="clientMessage" class="form-label">Message</label>
+								<textarea class="form-control" id="clientMessage" rows="4"
+									placeholder="Tell me about your photography needs..."></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary" id="sendMessageBtn">Send Message</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Photo Viewer Modal -->
+		<div class="modal fade" id="photoModal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="photoModalTitle">Photo View</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body text-center">
+						<img src="https://via.placeholder.com/800x600/4a5568/ffffff?text=Full+Size+Photo"
+							class="img-fluid" alt="Full size photo" id="photoModalImage">
+						<p class="mt-3 text-muted" id="photoModalDescription">Photo details and description would appear
+							here.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<!-- FOOTER -->
+	<footer class="bg-dark text-white py-5 mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 mb-4">
+					<h5 class="mb-3">Ari Taylor Photography</h5>
+					<p class="text-muted">Professional photographer specializing in portraits, events, and nature
+						photography. Based in Tulsa, available for worldwide travel.</p>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<h5 class="mb-3">Quick Links</h5>
+					<ul class="list-unstyled">
+						<li class="mb-2"><a href="#portfolio" class="text-white-50 text-decoration-none">Portfolio</a>
+						</li>
+						<li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none">Services &
+								Pricing</a></li>
+						<li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none">About Me</a></li>
+						<li class="mb-2"><a href="#" class="text-white-50 text-decoration-none" data-bs-toggle="modal"
+								data-bs-target="#contactModal">Contact</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 mb-4">
+					<h5 class="mb-3">Connect</h5>
+					<p class="text-muted mb-3">
+						Email: ari@atphoto.com<br>
+						Phone: (555) 123-4567
+					</p>
+					<div class="d-flex gap-2">
+						<a href="#" class="btn btn-outline-light btn-sm">Instagram</a>
+						<a href="#" class="btn btn-outline-light btn-sm">Facebook</a>
+						<a href="#" class="btn btn-outline-light btn-sm">Pinterest</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center mt-4 pt-4 border-top border-secondary">
+				<p class="mb-0 text-muted">&copy; 2025 Ari Taylor Photography. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="scripts.js"></script>
+</body>
+
+</html>
