@@ -4,8 +4,8 @@
 A professional photography portfolio website built with Bootstrap 5 to showcase photography services and work samples.
 
 ## Live Website
-**Live Site:** https://yourusername.github.io/photography-portfolio  
-**Repository:** https://github.com/yourusername/photography-portfolio
+**Live Site:** https://ari-trinity.github.io/photography-portfolio  
+**Repository:** https://github.com/ari-trinity/photography-portfolio
 
 ## Bootstrap Components Used
 
