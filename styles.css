@@ -1,0 +1,130 @@
+
+.bg-primary,
+.btn-primary {
+    background-color: #2d3748 !important;
+    border-color: #2d3748 !important;
+}
+
+.btn-primary:hover {
+    background-color: #1a202c !important;
+    border-color: #1a202c !important;
+}
+
+.btn-outline-primary {
+    color: #2d3748 !important;
+    border-color: #2d3748 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2d3748 !important;
+    color: white !important;
+}
+
+/* CAROUSEL CUSTOMIZATION */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Darker overlay on carousel for better text readability */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* CARD HOVER EFFECTS */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* PHOTO GALLERY */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* MODAL IMAGES */
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5 {
+    font-family: 'Georgia', serif;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* BUTTONS */
+.btn {
+    transition: all 0.3s ease;
+}
+
+/* FOOTER LINKS */
+footer a:hover {
+    color: #d4af37 !important;
+}
+
+/* ACCORDION CUSTOMIZATION */
+.accordion-item {
+    border: none;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #2d3748;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    header p {
+        font-size: 0.875rem;
+    }
+}
+
+/* SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth;
+}
+
+/* LOADING ANIMATION */
+body {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
